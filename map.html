@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_35003c0cbb1c55c48ab58a01bf1a8a16 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_35003c0cbb1c55c48ab58a01bf1a8a16" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_35003c0cbb1c55c48ab58a01bf1a8a16 = L.map(
+                "map_35003c0cbb1c55c48ab58a01bf1a8a16",
+                {
+                    center: [55.72, 37.52],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4ad90f7022cb39ebd81eb284bb354366 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4ad90f7022cb39ebd81eb284bb354366.addTo(map_35003c0cbb1c55c48ab58a01bf1a8a16);
+        
+    
+            var circle_marker_49f6e4832b82a2476d4557e33f5e36ea = L.circleMarker(
+                [55.6254670740427, 37.56014895645482],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(map_35003c0cbb1c55c48ab58a01bf1a8a16);
+        
+    
+        var popup_6e2073df23567053f51cb1f3db3b0a67 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3e8bdbf41a5221dacbc4de125813a5f9 = $(`<div id="html_3e8bdbf41a5221dacbc4de125813a5f9" style="width: 100.0%; height: 100.0%;">Битцевский лес</div>`)[0];
+                popup_6e2073df23567053f51cb1f3db3b0a67.setContent(html_3e8bdbf41a5221dacbc4de125813a5f9);
+            
+        
+
+        circle_marker_49f6e4832b82a2476d4557e33f5e36ea.bindPopup(popup_6e2073df23567053f51cb1f3db3b0a67)
+        ;
+
+        
+    
+    
+            circle_marker_49f6e4832b82a2476d4557e33f5e36ea.bindTooltip(
+                `<div>
+                     Битцевский лес
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2517c9c5b549a18d926a7808dc68c1f7 = L.marker(
+                [55.70971814245301, 37.5952817480515],
+                {
+}
+            ).addTo(map_35003c0cbb1c55c48ab58a01bf1a8a16);
+        
+    
+            var icon_44dd6e5d46f9001718b2dbe836eefead = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a3a6522da4407fa5629c27dbbcea44bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9beb58e926c640c13a68483a346f9c58 = $(`<div id="html_9beb58e926c640c13a68483a346f9c58" style="width: 100.0%; height: 100.0%;">Концертный зал BASE</div>`)[0];
+                popup_a3a6522da4407fa5629c27dbbcea44bd.setContent(html_9beb58e926c640c13a68483a346f9c58);
+            
+        
+
+        marker_2517c9c5b549a18d926a7808dc68c1f7.bindPopup(popup_a3a6522da4407fa5629c27dbbcea44bd)
+        ;
+
+        
+    
+    
+            marker_2517c9c5b549a18d926a7808dc68c1f7.bindTooltip(
+                `<div>
+                     Концертный зал BASE
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2517c9c5b549a18d926a7808dc68c1f7.setIcon(icon_44dd6e5d46f9001718b2dbe836eefead);
+            
+    
+            var marker_ad52b67c0dad381e6da572c330ac9c91 = L.marker(
+                [55.77621080718898, 37.44340936712159],
+                {
+}
+            ).addTo(map_35003c0cbb1c55c48ab58a01bf1a8a16);
+        
+    
+            var icon_de55c36ff41c94e2c6f4562d693c4077 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b195741cda3aa353fefab840a5d352bc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5e7ce896dbee9d54a978f2a424ca1d77 = $(`<div id="html_5e7ce896dbee9d54a978f2a424ca1d77" style="width: 100.0%; height: 100.0%;">Живописный мост</div>`)[0];
+                popup_b195741cda3aa353fefab840a5d352bc.setContent(html_5e7ce896dbee9d54a978f2a424ca1d77);
+            
+        
+
+        marker_ad52b67c0dad381e6da572c330ac9c91.bindPopup(popup_b195741cda3aa353fefab840a5d352bc)
+        ;
+
+        
+    
+    
+            marker_ad52b67c0dad381e6da572c330ac9c91.bindTooltip(
+                `<div>
+                     Живописный мост
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ad52b67c0dad381e6da572c330ac9c91.setIcon(icon_de55c36ff41c94e2c6f4562d693c4077);
+            
+    
+            var poly_line_bc71a0b122b2a797a576f050bccf1d4b = L.polyline(
+                [[55.638, 37.519], [55.635, 37.519], [55.633, 37.52], [55.63, 37.52]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_35003c0cbb1c55c48ab58a01bf1a8a16);
+        
+    
+        var popup_253a5937f61311c35992d216ef5750ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eecb565a664ec6e923f5ac2328df9762 = $(`<div id="html_eecb565a664ec6e923f5ac2328df9762" style="width: 100.0%; height: 100.0%;">Профсоюзная улица</div>`)[0];
+                popup_253a5937f61311c35992d216ef5750ab.setContent(html_eecb565a664ec6e923f5ac2328df9762);
+            
+        
+
+        poly_line_bc71a0b122b2a797a576f050bccf1d4b.bindPopup(popup_253a5937f61311c35992d216ef5750ab)
+        ;
+
+        
+    
+    
+            poly_line_bc71a0b122b2a797a576f050bccf1d4b.bindTooltip(
+                `<div>
+                     Профсоюзная улица
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
