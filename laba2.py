@@ -65,17 +65,14 @@ class GISApplication:
         self.add_demo_objects()
 
     def set_osm_map(self):
-        """Установка OpenStreetMap"""
         self.map_widget.set_tile_server("https://a.tile.openstreetmap.org/{z}/{x}/{y}.png")
         self.info_label.config(text="Используется: OpenStreetMap")
 
     def set_google_map(self):
-        """Установка Google Maps"""
         self.map_widget.set_tile_server("https://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}&s=Ga")
         self.info_label.config(text="Используется: Google Maps")
 
     def add_object(self):
-        """Добавление объекта на карту"""
         try:
             coords_text = self.coord_entry.get()
             name = self.name_entry.get() or "Объект"
@@ -98,7 +95,6 @@ class GISApplication:
                     self.info_label.config(text="Для линии нужно больше точек")
 
             elif obj_type == "Полигон":
-                # Создаем простой треугольник
                 polygon_coords = [
                     (lat, lon),
                     (lat + 0.005, lon + 0.005),
@@ -115,35 +111,28 @@ class GISApplication:
             self.info_label.config(text=f"Ошибка: {str(e)}")
 
     def add_marker_at_position(self, coords):
-        """Добавление маркера по клику правой кнопкой мыши"""
         marker = self.map_widget.set_marker(coords[0], coords[1], text=f"Маркер {len(self.markers) + 1}")
         self.markers.append(marker)
         self.info_label.config(text=f"Добавлен маркер в позиции: {coords}")
 
     def add_demo_objects(self):
-        """Добавление демонстрационных объектов"""
-        # 1. ТОЧЕЧНЫЕ ОБЪЕКТЫ (маркеры) - 3 объекта
         mgu = self.map_widget.set_marker(55.7023, 37.5328, text="МГУ")
         mai = self.map_widget.set_marker(55.8118, 37.5266, text="МАИ")
         bmstu = self.map_widget.set_marker(55.7665, 37.6844, text="МГТУ им. Баумана")
         self.markers.extend([mgu, mai, bmstu])
 
-        # 2. ЛИНЕЙНЫЕ ОБЪЕКТЫ - 3 объекта
-        # Ломоносовский проспект от МГУ
         lomonosov_route = self.map_widget.set_path([
             (55.7023, 37.5328),  # МГУ
             (55.7098, 37.5512),
             (55.7190, 37.5710)
         ])
 
-        # Ленинградский проспект от МАИ
         leningradsky_route = self.map_widget.set_path([
             (55.8118, 37.5266),  # МАИ
             (55.7970, 37.5530),
             (55.7810, 37.5810)
         ])
 
-        # Линия метро через Бауманскую
         metro_route = self.map_widget.set_path([
             (55.7558, 37.6173),
             (55.7665, 37.6844),  # МГТУ
@@ -152,7 +141,6 @@ class GISApplication:
 
         self.paths.extend([lomonosov_route, leningradsky_route, metro_route])
 
-        # 3. ПЛОЩАДНЫЕ ОБЪЕКТЫ (полигоны) - 3 объекта
         # Территория МГУ
         mgu_campus = self.map_widget.set_polygon([
             (55.7050, 37.5280),
@@ -185,7 +173,6 @@ class GISApplication:
         self.info_label.config(text="Демонстрационные объекты добавлены: 3 маркера, 3 линии, 3 полигона")
 
     def clear_all(self):
-        """Очистка всех объектов с карты"""
         for marker in self.markers:
             marker.delete()
         for polygon in self.polygons:
@@ -200,10 +187,7 @@ class GISApplication:
         self.info_label.config(text="Все объекты удалены")
 
     def run(self):
-        """Запуск приложения"""
         self.window.mainloop()
 
-# Запуск приложения
-if __name__ == "__main__":
-    app = GISApplication()
-    app.run()
+app = GISApplication()
+app.run()
