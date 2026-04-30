@@ -11,9 +11,9 @@ class Dota2App:
         self.conn = psycopg2.connect(
             dbname='dota2_tournaments',
             user='postgres',
-            password='7526',
+            password='****',
             host='localhost',
-            port='5432'
+            port='****'
         )
         self.cursor = self.conn.cursor()
 
