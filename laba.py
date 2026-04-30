@@ -1,5 +1,4 @@
 from tkinter import *
-
 import math
 
 def solve_cubic(a,b,c,d):
